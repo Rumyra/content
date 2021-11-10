@@ -164,7 +164,7 @@ var obj = { property_1:   value_1,   // property_# may be an identifier...
             'property n': value_n }; // or a string
 ```
 
-where `obj` is the name of the new object, each `property_i` is an identifier (either a name, a number, or a string literal), and each `value_i` is an expression whose value is assigned to the `property_i`. The `obj` and assignment is optional; if you do not need to refer to this object elsewhere, you do not need to assign it to a variable. (Note that you may need to wrap the object literal in parentheses if the object appears where a statement is expected, so as not to have the literal be confused with a block statement.)
+where `obj` is the name of the new object, each `property_i` is an identifier (either a name, a number, or a string literal), and each `value_i` is an expression whose value is assigned to the `property_i`. The `obj` and assignment are optional; if you do not need to refer to this object elsewhere, you do not need to assign it to a variable. (Note that you may need to wrap the object literal in parentheses if the object appears where a statement is expected, so as not to have the literal be confused with a block statement.)
 
 Object initializers are expressions, and each object initializer results in a new object being created whenever the statement in which it appears is executed. Identical object initializers create distinct objects that will not compare to each other as equal. Objects are created as if a call to `new Object()` were made; that is, objects made from object literal expressions are instances of `Object`.
 
@@ -298,7 +298,7 @@ You can refer to a property of an object either by its property name or by its o
 
 This restriction applies when you create an object and its properties with a constructor function (as we did previously with the `Car` object type) and when you define individual properties explicitly (for example, `myCar.color = "red"`). If you initially define an object property with an index, such as `myCar[5] = "25 mpg"`, you subsequently refer to the property only as `myCar[5]`.
 
-The exception to this rule is array-like object reflected from HTML, such as the `forms` array-like object. You can always refer to objects in these array-like objects by either their ordinal number (based on where they appear in the document) or their name (if defined). For example, if the second `<FORM>` tag in a document has a `NAME` attribute of "myForm", you can refer to the form as `document.forms[1]` or `document.forms["myForm"]` or `document.forms.myForm`.
+The exception to this rule is array-like objects reflected from HTML, such as the `forms` array-like object. You can always refer to objects in these array-like objects by either their ordinal number (based on where they appear in the document) or their name (if defined). For example, if the second `<FORM>` tag in a document has a `NAME` attribute of "myForm", you can refer to the form as `document.forms[1]` or `document.forms["myForm"]` or `document.forms.myForm`.
 
 ## Defining properties for an object type
 
@@ -385,7 +385,7 @@ const Manager = {
   age: 27,
   job: "Software Engineer"
 }
-const Intern= {
+const Intern = {
   name: "Ben",
   age: 21,
   job: "Software Engineer Intern"
@@ -403,7 +403,7 @@ Manager.sayHi() // Hello, my name is John'
 Intern.sayHi() // Hello, my name is Ben'
 ```
 
-The `this` refers to the object that it is in. You can create a new function called `howOldAmI()`which logs a sentence saying how old the person is.
+The `this` refers to the object that it is in. You can create a new function called `howOldAmI()` which logs a sentence saying how old the person is.
 
 ```js
 function howOldAmI (){
